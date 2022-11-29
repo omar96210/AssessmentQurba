@@ -1,0 +1,74 @@
+<body>
+    <!-- -----navbar for the login page dosnot have the search or the cart tap------- -->
+    <div class="header">
+        <div>
+
+            <a style="background-color: white  !important; color: black;" class="logo">
+                <img width="50px" style="padding-left:10px;" src="assets/img/logo.png" />
+                ClickTik
+            </a>
+        </div>
+        <div>
+            <a >Home</a>
+        </div>
+        <div class="header-right">
+            <a >Login in</a>
+        </div>
+
+    </div>
+
+    <hr>
+    <!-- -----end of navbar------- -->
+
+    <!-- -----start of form------- -->
+    <div class="loginform">
+        <div class="formStart">
+            <img width="100px" style="padding-left:10px;" src="assets/img/logo.png" />
+            <h1> Log in to your account</h1>
+            <p class="gray">Welcome back! Please enter your details.</p>
+        </div>
+
+
+        <form> 
+
+            <div class="p5login">
+                <label style="margin-left:-350px ;" for="fname">Email
+                    <div class="tooltip"> ?
+                        <span class="tooltiptext">atuny0</span>
+                      </div></label><br>
+            </div>
+            <input class="formbox"  type="User" id="User" placeholder="Enter your UserName" [formControl]="UserForm"><br><br>
+
+            <div class="p5login">
+                <label style="margin-left:-320px ;" for="lname">Password
+                    <div class="tooltip"> ?
+                        <span class="tooltiptext">9uQFF1Lh</span>
+                      </div></label><br>
+            </div>
+            <input class="formbox"  type="password" id="Pass"
+                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" [formControl]="PassForm"><br><br>
+
+            <input (click)="login()" class="loginBott" value="Log in">
+        </form>
+
+    </div>
+
+    <!-- -----end of form------- -->
+
+</body>
+
+
+<footer>
+    <div style="margin: 30px;">
+        <a class="logo">
+            <img width="40px" style="padding-left:10px;" src="assets/img/logo.png" />
+            ClickTik
+        </a>
+        <a style=" float: right;">
+            © 2022 ClickTik
+        </a>
+
+    </div>
+
+
+</footer>
