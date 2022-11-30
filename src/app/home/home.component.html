@@ -23,8 +23,23 @@
     </div>
     <hr>
 
+    <div style="border:1px solid gray ;  height: 80%;
+  width: 20%; border-radius: 10px; padding: 5px; margin-left: 80px;" >
+        <div  *ngFor='let product of product;'>
 
-
+            <label class="container">
+                <input style=" accent-color: skyblue;" type="checkbox" (click)="selected(product)">
+                <span class="checkmark"></span>
+                {{product}}
+              </label>
+        </div>
+    </div>
+    <div style="border:1px solid gray ;  height: 80%;
+    width: 20%; border-radius: 10px; padding: 5px; margin-left: 280px;"  *ngFor='let categorydata of categorydata;index as i'>
+    <p>{{categorydata }}</p>
+        <p>{{categorydata |json }}</p>
+        
+    </div>
 
 
 

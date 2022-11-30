@@ -14,6 +14,13 @@ export class LoginComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   login() {
+    if(this.UserForm.value==""||this.PassForm.value==""){
+
+      alert("username or pass is empty please full it up");
+
+      
+    }else{
+
     fetch('https://dummyjson.com/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -30,17 +37,17 @@ export class LoginComponent {
        })
       .then(() => {
         if(this.obj.message=="Invalid credentials"){
-          console.log("not succes",this.obj)
-
+          alert("Username and pass are not correct");
         }else{
-          console.log("succes",this.obj);
-
           this.go();
 
         }
        });
 
   }
+
+    }
+
   go() {
     this.router.navigate([`../Home`], { relativeTo: this.route });
   }
