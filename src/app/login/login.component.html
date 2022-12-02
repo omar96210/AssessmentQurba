@@ -1,4 +1,4 @@
-<body>
+
     <!-- -----navbar for the login page dosnot have the search or the cart tap------- -->
     <div class="header">
         <div>
@@ -9,9 +9,13 @@
             </a>
         </div>
         <div>
-            <a >Home</a>
+            <div class="headeritem">
+                <a>Home</a>
+        
+            </div>
+        
         </div>
-        <div class="header-right">
+        <div class="header-right headeritem" >
             <a >Login in</a>
         </div>
 
@@ -21,6 +25,7 @@
     <!-- -----end of navbar------- -->
 
     <!-- -----start of form------- -->
+    <div class="body">
     <div class="loginform">
         <div class="formStart">
             <img width="100px" style="padding-left:10px;" src="assets/img/logo.png" />
@@ -32,9 +37,9 @@
         <form> 
 
             <div class="p5login">
-                <label style="margin-left:-350px ;" for="fname">Email
+                <label style="margin-left:-320px ;" for="fname">UserName
                     <div class="tooltip"> ?
-                        <span class="tooltiptext">atuny0</span>
+                        <span class="tooltiptext">atuny0/hbingley1/rshawe2</span>
                       </div></label><br>
             </div>
             <input class="formbox"  type="User" id="User" placeholder="Enter your UserName" [formControl]="UserForm"><br><br>
@@ -42,10 +47,10 @@
             <div class="p5login">
                 <label style="margin-left:-320px ;" for="lname">Password
                     <div class="tooltip"> ?
-                        <span class="tooltiptext">9uQFF1Lh</span>
+                        <span class="tooltiptext">9uQFF1Lh/CQutx25i8r/OWsTbMUgFc</span>
                       </div></label><br>
             </div>
-            <input class="formbox"  type="password" id="Pass"
+            <input class="formbox"  type="password" id="Pass" 
                 placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" [formControl]="PassForm"><br><br>
 
             <input (click)="login()" class="loginBott" value="Log in">
@@ -55,7 +60,7 @@
 
     <!-- -----end of form------- -->
 
-</body>
+</div>
 
 
 <footer>

@@ -49,7 +49,8 @@ export class LoginComponent {
     }
 
   go() {
-    this.router.navigate([`../Home`], { relativeTo: this.route });
+    console.log(this.obj.token)
+    this.router.navigate([`../Home`], { queryParams: { token: this.obj.token} });
   }
 
 }

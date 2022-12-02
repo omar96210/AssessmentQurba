@@ -1,25 +1,40 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
+.body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column
     
 }
+
 .gray{
     color: gray;
 }
 .header {
+    position: fixed;
+    width: 99%;
+    z-index: 100;
+    border-bottom: 1px solid black;
     overflow: hidden;
     background-color: white;
     margin: -10px -10px -10px -10px;
     padding: 20px 10px 10px;
-}
 
-.header a {
-    
+}
+.headeritem{
+    float: left;
+    color: gray;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+     padding: 10px;
+
+    cursor: pointer;
+}
+.header a  {
     float: left;
     color: gray;
     text-align: center;
@@ -40,11 +55,7 @@ body {
 
 }
 
-.header a:hover {
-    background-color: lightgray;
-    color: black;
- 
-}
+
 
 .header a.active {
     background-color: lightgray;
@@ -55,17 +66,6 @@ body {
     float: right;
 }
 
-@media screen and (max-width: 500px) {
-    .header a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .header-right {
-        float: none;
-    }
-}
 
 hr {
     margin-left: -20px;
@@ -73,6 +73,7 @@ hr {
 }
 
 .loginform{
+    zoom: 90%;
     top: 25%;
     left: 39%;
     text-align: center;
@@ -121,7 +122,7 @@ footer {
   
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 320px;
     background-color: black;
     color: #fff;
     text-align: center;
