@@ -29,7 +29,8 @@ export class HomeComponent {
   token: any;
   searchForm = new FormControl('');
   keyworld: any;
-
+  titleText:any;
+  allcheckbox:boolean =false;
 
   constructor(
     private route: ActivatedRoute,
@@ -97,11 +98,22 @@ export class HomeComponent {
     }
 
     if(category=='all'){
-
-      this.allproduct();
+      if(this.allcheckbox==false){
+        this.allcheckbox=true;
+        this.allproduct();
+        
+      }else{
+        this.allcheckbox=false;
+        this.categorydata=null
+        this.paginationactive=false;
+        this.titleText=null;
+      }
+      
 
     }else{
+
       this.itemCatagory();
+
     }
 
   }
@@ -117,10 +129,11 @@ export class HomeComponent {
       fetch('https://dummyjson.com/products/category/'+item)
       .then(res => res.json())
       .then(data => {
-
+        this.paginationactive=false;
+        this.titleText=data.products[0].category
         this.categorydata=data.products
       // this.paginationactive=true;
- 
+
 
         // console.log("2")
 
@@ -147,7 +160,7 @@ export class HomeComponent {
   this.paginationactive=true;
   this.calcPage=this.currentpage*this.itemPerPage
   // console.log(this.currentpage,(this.categorydata.length-(this.categorydata.length-(this.currentpage+6))))
-
+  this.titleText="All Products"
   //this calc is based on 6 item in each page that slice the array from 0-6 /6-12/ 12-18/... and it is dynamic  for any number of data
   this.categorydata=this.categorydata.slice(this.calcPage,(this.categorydata.length-(this.categorydata.length-(this.calcPage+this.itemPerPage))))
  })
@@ -200,11 +213,17 @@ export class HomeComponent {
     fetch('https://dummyjson.com/products/search?q='+this.keyworld)
     .then(res => res.json())
     .then(data => {
-
+      this.paginationactive=false;
+      this.titleText=this.keyworld;
       this.categorydata=data.products
 
      })
     
   }
-
+  ChangeItemPerPAge(i:any){
+    this.currentpage='0';
+    this.PageNgClass='0'
+    this.itemPerPage=i;
+    this.allproduct();
+  }
 }

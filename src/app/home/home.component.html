@@ -11,6 +11,16 @@
         <a>Home</a>
 
     </div>
+    <div class="headeritem"  *ngIf="paginationactive" >
+        
+    <span >
+        <p style="margin-top: -10px;">Pagantion Item Per Page</p>
+            <button (click)="ChangeItemPerPAge(2)">2</button>
+            <button (click)="ChangeItemPerPAge(3)">3</button>
+            <button (click)="ChangeItemPerPAge(6)">6</button>
+    </span>
+    </div>
+ 
 
     <div class="header-right" style="display: flex;">
 
@@ -60,8 +70,9 @@
           
         </div>
     </div>
+    <h1>{{titleText}}</h1>
+    <p>Home/Product/{{titleText}}</p>
 
-    <p>Home/product/iphone</p>
 
     <div style="width: 100%; height: 100%;">
         <div style="border:1px solid gray ;  
@@ -69,7 +80,7 @@
 ">
             <table>
                 <label class="container">
-                    <input style=" accent-color: skyblue;" type="checkbox" (click)="selected('all')">
+                    <input id="all" style=" accent-color: skyblue;" type="checkbox" (click)="selected('all')">
                     <span class="checkmark"></span>
                     ALL
                 </label>
@@ -112,8 +123,15 @@
                             <p>Brand: {{categorydata.brand}}</p>
                             <p>Category: {{categorydata.category}}</p>
                             <p>In Stock: {{categorydata.stock}}</p>
-                            <p style="color: #F4B000; text-align: right;"> <i class="fas fa-star"></i>
-                                {{categorydata.rating}}
+                            <p style="color: #F4B000; text-align: right;">
+                                <span style="color: green; " *ngIf="cartarray.includes(categorydata.title)" >
+                                    <i class="far fa-check-circle"></i>
+                                    In Cart
+                                </span>
+
+                                <i class="fas fa-star"></i>
+                                   {{categorydata.rating}}
+                                
                             </p>
                             <div style="padding: 5px;">
                                 <input style="cursor: pointer;" (click)="addToCart(categorydata.title)" class="button1" value="Add to Cart">

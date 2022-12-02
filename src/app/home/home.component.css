@@ -2,9 +2,10 @@
 .body {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 220px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .gray{
@@ -79,9 +80,8 @@ hr {
 
 footer {
     position:absolute;
-    margin: auto 0;    width:100%;
+     width:100%;
     margin-left:-8px ;
-    
     background-color: #1D2939;
     color: white;
   }
