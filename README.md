@@ -1,7 +1,7 @@
 # Qurba
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
-![alt text](https://github.com/omar96210/AssessmentQurba/blob//image.jpg?raw=true)
+![alt text](https://github.com/omar96210/AssessmentQurba/src/assets/Gitimg/1.PNG?raw=true)
 
 ## Development server
 
