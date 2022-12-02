@@ -15,3 +15,20 @@ you can use the ones at the tooltip or just get any form the api.
 ## Home Page
 you can only get here by token after login in this page is the product view and add to cart 
 ![plot](./src/assets/Gitimg/4.PNG)
+
+## product all 
+![plot](./src/assets/Gitimg/5.PNG)
+
+## search for product 
+![plot](./src/assets/Gitimg/7.PNG)
+
+## cart adding
+there is green text with the checkmarke will show only if you addit this item to cart 
+
+![plot](./src/assets/Gitimg/6.PNG)
+
+## cart modal 
+when you click on the cart icon modal dialog will show the name of each item added to cart 
+
+![plot](./src/assets/Gitimg/8.PNG)
+
