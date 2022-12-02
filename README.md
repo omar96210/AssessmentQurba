@@ -8,6 +8,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ![plot](./src/assets/Gitimg/1.PNG)
 
 ## Username & Pass
-you can use the ones at the tooltip or just get any form the api
-![plot1](./src/assets/Gitimg/2.PNG)
-![plot2](./src/assets/Gitimg/3.PNG)
+you can use the ones at the tooltip or just get any form the api.
+
+![plot](./src/assets/Gitimg/2.PNG)
+
+![plot](./src/assets/Gitimg/3.PNG)
