@@ -17,6 +17,7 @@ you can only get here by token after login in this page is the product view and 
 ![plot](./src/assets/Gitimg/4.PNG)
 
 ## product all 
+pagination will only show here becoues every catagory have less then 5 item but the all have 30 but the pagination is dyanimac it will work when it get the length of fetch array and you can change the item perpage from the control button at the nav when all selected
 ![plot](./src/assets/Gitimg/5.PNG)
 
 ## search for product 
@@ -32,3 +33,7 @@ when you click on the cart icon modal dialog will show the name of each item add
 
 ![plot](./src/assets/Gitimg/8.PNG)
 
+
+## problem not fiexed
+the checkbox will get each category name but when trying to fetch all to show all the selected any join i tryed get an error but each category show it is data 
+the only one worked is adding array as nested but that will make to complex to show the path to html using Ngfor.
